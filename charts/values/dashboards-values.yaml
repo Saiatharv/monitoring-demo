@@ -1,11 +1,18 @@
-opensearchHosts: "http://opensearch-cluster-master:9200"
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dashboard-values
+data:
+  values.yaml: |
+    opensearchHosts: "http://opensearch-cluster-master:9200"
 
-service:
-  type: NodePort
-  nodePort: 32003
+    service:
+      type: NodePort
+      nodePort: 32003
 
-resources:
-  requests:
-    memory: "512Mi"
-  limits:
-    memory: "1Gi"
+    resources:
+      requests:
+        memory: "512Mi"
+      limits:
+        memory: "1Gi"
+
