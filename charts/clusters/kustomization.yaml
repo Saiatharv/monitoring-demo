@@ -4,7 +4,11 @@ resources:
   - prometheus-release.yaml
   - opensearch-release.yaml
   - dashboards-release.yaml
+  - ../manifests/sample-app/deployment.yaml
+  - ../manifests/sample-app/service.yaml
+  - ../manifests/sample-app/servicemonitor.yaml
+  - ../manifests/sample-app/prometheus-rule.yaml
   - ../values/prometheus-values.yaml
-  - ../values/opensearch-values.yaml.yaml
+  - ../values/opensearch-values.yaml
   - ../values/dashboards-values.yaml
   - ../values/grafana-values.yaml
