@@ -4,11 +4,7 @@ metadata:
   name: prometheus-values
 data:
   values.yaml: |
-    grafana:
-      adminPassword: "Admin@12345"
-      service:
-        type: NodePort
-        nodePort: 32000
+   
 
     prometheus:
       service:
