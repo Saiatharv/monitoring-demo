@@ -14,4 +14,5 @@ resources:
   - ../../values/grafana-values.yaml
   - ../../manifests/helm-repositories/prometheus-community.yaml
   - ../../manifests/helm-repositories/opensearch.yaml
+  - ../../manifests/grafana/grafana-dashboard-sample.yaml
 
