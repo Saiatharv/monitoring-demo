@@ -13,9 +13,9 @@ resources:
   - values/grafana-values.yaml
 
   # Helm releases
-  - manifests/helmreleases/prometheus-release.yaml
-  - manifests/helmreleases/opensearch-release.yaml
-  - manifests/helmreleases/dashboards-release.yaml
+  - prometheus-release.yaml
+  - opensearch-release.yaml
+  - dashboards-release.yaml
 
   # Sample app
   - manifests/sample-app/deployment.yaml
