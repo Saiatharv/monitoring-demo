@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboard-sample
+  labels:
+    grafana_dashboard: "1"
+data:
+  dashboard-sample.json: |
+    {
+      "title": "Sample App Dashboard",
+      "panels": [
+        {
+          "type": "stat",
+          "title": "Sample App Status",
+          "targets": [
+            {
+              "expr": "up{service=\"sample-app\"}"
+            }
+          ],
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        }
+      ],
+      "schemaVersion": 36,
+      "version": 1
+    }
+
