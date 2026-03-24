@@ -12,7 +12,7 @@ resources:
   - ../../values/opensearch-values.yaml
   - ../../values/dashboards-values.yaml
   - ../../values/grafana-values.yaml
-  - ../../manifests/helm-repositories/prometheus-community.yaml
-  - ../../manifests/helm-repositories/opensearch.yaml
+  - ../../manifests/helmrepository/prometheus.yaml
+  - ../../manifests/helmrepository/opensearch.yaml
   - ../../manifests/grafana/grafana-dashboard-sample.yaml
 
