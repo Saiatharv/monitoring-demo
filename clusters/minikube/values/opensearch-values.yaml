@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: opensearch-values
+data:
+  values.yaml: |
+    clusterName: "opensearch-cluster"
+    nodeGroup: "master"
+
+    replicas: 1
+
+    opensearchJavaOpts: "-Xms1g -Xmx1g"
+
+    resources:
+      requests:
+        memory: "1.5Gi"
+      limits:
+        memory: "2Gi"
+
+    extraEnvs:
+      - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
+        value: "Admin@12345"
+
+    service:
+      type: NodePort
+      nodePort: 32002
+
