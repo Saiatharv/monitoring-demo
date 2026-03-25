@@ -23,5 +23,5 @@ data:
 
     service:
       type: NodePort
-      nodePort: 32002
+      nodePort: 32112
 
