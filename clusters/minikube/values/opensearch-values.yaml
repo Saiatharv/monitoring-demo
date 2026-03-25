@@ -18,8 +18,11 @@ data:
       limits:
         memory: "2Gi"
 
-    securityConfig:
-      adminPassword: "StrongPass@2026!"
+    opensearch:
+      security:
+        enabled: true
+        adminPassword: "StrongPass@2026!"   # choose your password
+    
 
     service:
       type: NodePort
