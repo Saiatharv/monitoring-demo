@@ -10,7 +10,7 @@ data:
     prometheus:
       service:
         type: NodePort
-        nodePort: 32001
+        nodePort: 32111
 
     alertmanager:
       service:
