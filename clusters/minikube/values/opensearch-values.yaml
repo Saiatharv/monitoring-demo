@@ -20,7 +20,7 @@ data:
 
     extraEnvs:
       - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
-        value: "Admin@12345"
+        value: "Adm@12345!"
 
     service:
       type: NodePort
