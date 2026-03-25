@@ -21,14 +21,11 @@ data:
     opensearch:
       extraEnvs:
         - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
-          value: "StrongPass@2026!" 
+          value: "StrongPass@2026!"
 
-      security:
+      securityConfig:
         enabled: true
-      
-    
 
     service:
       type: NodePort
       nodePort: 32112
-
