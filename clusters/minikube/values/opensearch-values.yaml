@@ -21,7 +21,6 @@ data:
     securityConfig:
       adminPassword: "StrongPass@2026!"
 
-
     service:
       type: NodePort
       nodePort: 32002
