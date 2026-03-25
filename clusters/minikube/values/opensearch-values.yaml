@@ -19,9 +19,13 @@ data:
         memory: "2Gi"
 
     opensearch:
+      extraEnvs:
+        - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
+          value: "StrongPass@2026!" 
+
       security:
         enabled: true
-        adminPassword: "StrongPass@2026!"   # choose your password
+      
     
 
     service:
