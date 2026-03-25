@@ -18,9 +18,9 @@ data:
       limits:
         memory: "2Gi"
 
-    extraEnvs:
-      - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
-        value: "Adm@12345!"
+    securityConfig:
+      adminPassword: "StrongPass@2026!"
+
 
     service:
       type: NodePort
