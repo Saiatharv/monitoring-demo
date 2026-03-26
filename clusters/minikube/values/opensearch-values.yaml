@@ -19,7 +19,7 @@ data:
         memory: "2Gi"
 
     opensearch:
-      extraEnvs:
+      extraEnvVars:
         - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
           value: "StrongPass@2026!"
 
