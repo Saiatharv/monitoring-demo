@@ -18,8 +18,9 @@ data:
       limits:
         memory: "2Gi"
 
-    opensearchSecurityConfig:
-      adminPassword: "StrongPass@2026!"
+    plugins:
+      security:
+        disabled: true
 
     service:
       type: NodePort
