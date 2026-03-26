@@ -18,12 +18,8 @@ data:
       limits:
         memory: "2Gi"
 
-    env:
-      - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
-        value: "StrongPass@2026!"
-
-    securityConfig:
-      enabled: true
+    opensearchSecurityConfig:
+      adminPassword: "StrongPass@2026!"
 
     service:
       type: NodePort
