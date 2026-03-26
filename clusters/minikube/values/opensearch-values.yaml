@@ -18,13 +18,12 @@ data:
       limits:
         memory: "2Gi"
 
-    opensearch:
-      extraEnvVars:
-        - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
-          value: "StrongPass@2026!"
+    env:
+      - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
+        value: "StrongPass@2026!"
 
-      securityConfig:
-        enabled: true
+    securityConfig:
+      enabled: true
 
     service:
       type: NodePort
