@@ -5,8 +5,6 @@ metadata:
   namespace: flux-system
 data:
   values.yaml: |
-   
-
     prometheus:
       service:
         type: NodePort
@@ -17,3 +15,15 @@ data:
         type: NodePort
         nodePort: 32004
 
+    grafana:
+      adminPassword: "Admin123!@"
+      service:
+        type: NodePort
+        nodePort: 32000
+
+      dashboards:
+        default:
+          node-exporter-full:
+            gnetId: 1860
+            revision: 27
+            datasource: Prometheus
