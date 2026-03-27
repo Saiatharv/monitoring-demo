@@ -22,6 +22,10 @@ data:
       security:
         disabled: true
 
+    opensearchSecurity:
+      enabled: false
+
+
     service:
       type: NodePort
       nodePort: 32112
