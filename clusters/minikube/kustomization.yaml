@@ -10,7 +10,6 @@ resources:
   - values/prometheus-values.yaml
   - values/opensearch-values.yaml
   - values/dashboards-values.yaml
-  - values/grafana-values.yaml
 
   # Helm releases
   - prometheus-release.yaml
