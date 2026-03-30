@@ -20,7 +20,7 @@ spec:
     - name: cpu-alerts
       rules:
         - alert: HighCPUUsage
-          expr: sum(rate(container_cpu_usage_seconds_total{container!="",pod!=""}[2m])) > 0.8
+          expr: sum(rate(container_cpu_usage_seconds_total{pod="cpu-burn", namespace="default"}[2m])) > 0.8
           for: 2m
           labels:
             severity: warning
