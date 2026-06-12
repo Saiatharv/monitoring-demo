@@ -9,7 +9,7 @@ data:
       name: monitoring-demo
 
     destinations:
-      - name: grafana-cloud-metrics
+      grafana-cloud-metrics:
         type: prometheus
         url: https://prometheus-prod-65-prod-eu-west-2.grafana.net/api/prom/push
         auth:
