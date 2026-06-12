@@ -5,16 +5,19 @@ resources:
   # Helm repositories
   - manifests/helmrepository/prometheus.yaml
   - manifests/helmrepository/opensearch.yaml
+  - manifests/helmrepository/grafana.yaml 
 
   # Values ConfigMaps
   - values/prometheus-values.yaml
   - values/opensearch-values.yaml
   - values/dashboards-values.yaml
+  - values/grafana-cloud-values.yaml
 
   # Helm releases
   - prometheus-release.yaml
   - opensearch-release.yaml
   - dashboards-release.yaml
+  - grafana-cloud-release.yaml 
 
   # Sample app
   - manifests/sample-app/deployment.yaml
