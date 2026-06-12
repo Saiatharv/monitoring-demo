@@ -15,7 +15,15 @@ data:
         auth:
           type: basic
           username: "monitoring-demotoken"
-          password: "glc_eyJvIjoiMTgwOTY4OSIsIm4iOiJzdGFjay0xNjg4NjMyLWludGVncmF0aW9uLW1vbml0b3JpbmctZGVtb3Rva2VuLW1vbml0b3JpbmctZGVtb3Rva2VuIiwiayI6IkJGMEI5QTdoNkRkM2doYkNhYzIxOHc5OCIsIm0iOnsiciI6InByb2QtZXUtd2VzdC0yIn19"
+          password: glc_eyJvIjoiMTgwOTY4OSIsIm4iOiJzdGFjay0xNjg4NjMyLWludGVncmF0aW9uLW1vbml0b3JpbmctZGVtb3Rva2VuLW1vbml0b3JpbmctZGVtb3Rva2VuIiwiayI6IkJGMEI5QTdoNkRkM2doYkNhYzIxOHc5OCIsIm0iOnsiciI6InByb2QtZXUtd2VzdC0yIn19
+
+      grafana-cloud-logs:
+        type: loki
+        url: https://logs-prod-012.grafana.net/loki/api/v1/push
+        auth:
+          type: basic
+          username: "1646419"                 # ← numeric ID
+          password: "glc_eyJvIjoiMTgwOTY4OSIsIm4iOiJzdGFjay0xNjg4NjMyLWhsLXJlYWQtbG9raXRva2VuIiwiayI6IjA2RzdiWEV5RG1MMDQybjJsNnk0ejRYbCIsIm0iOnsiciI6InByb2QtZXUtd2VzdC0yIn19"
 
     collectors:
       alloy-metrics:
@@ -48,7 +56,7 @@ data:
       enabled: true
       collector: alloy-singleton
       destinations:
-        - grafana-cloud-metrics
+        - grafana-cloud-metrics               #loki destination
 
     podLogs:
       enabled: false
