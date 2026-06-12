@@ -24,11 +24,13 @@ data:
 
     clusterMetrics:
       enabled: true
+      collector: alloy-metrics
       destinations:
         - grafana-cloud-metrics
 
     clusterEvents:
       enabled: true
+      collector: alloy-singleton
       destinations:
         - grafana-cloud-metrics
 
