@@ -20,6 +20,7 @@ data:
     collectors:
       alloy-metrics:
         enabled: true
+        presets: [clustered]
 
     clusterMetrics:
       enabled: true
