@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-cloud-values
+  namespace: flux-system
+data:
+  values.yaml: |
+    cluster:
+      name: monitoring-demo
+
+    destinations:
+      - name: grafana-cloud-metrics
+        type: prometheus
+        url: https://prometheus-prod-65-prod-eu-west-2.grafana.net/api/prom/push
+        auth:
+          type: basic
+          username: "monitoring-demotoken"
+          password: "glc_eyJvIjoiTgwOTY4OSIsIm4i0iJzdGFjay0xNjg4NjMyLWludGVncmF0aW9uLW1vbml0b3JpbmctZGVtb3Rva2VuIiwibiI6IkpGMEI5QTdoNkRkM2doYkNhYzIxOHc1OCIsIm0iOnsiciI6InByb2QtZXUtd2VzdC0yVzdC0yVzdC0yIn19"
+
+    clusterMetrics:
+      enabled: true
+
+    clusterEvents:
+      enabled: true
+
+    podLogs:
+      enabled: true
