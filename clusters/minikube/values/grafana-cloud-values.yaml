@@ -15,13 +15,21 @@ data:
         auth:
           type: basic
           username: "monitoring-demotoken"
-          password: "glc_eyJvIjoiTgwOTY4OSIsIm4i0iJzdGFjay0xNjg4NjMyLWludGVncmF0aW9uLW1vbml0b3JpbmctZGVtb3Rva2VuIiwibiI6IkpGMEI5QTdoNkRkM2doYkNhYzIxOHc1OCIsIm0iOnsiciI6InByb2QtZXUtd2VzdC0yVzdC0yVzdC0yIn19"
+          password: "glc_eyJvIjoiTgwOTY4OS..."
+
+    collectors:
+      alloy-metrics:
+        enabled: true
 
     clusterMetrics:
       enabled: true
+      destinations:
+        - grafana-cloud-metrics
 
     clusterEvents:
       enabled: true
+      destinations:
+        - grafana-cloud-metrics
 
     podLogs:
-      enabled: true
+      enabled: false
