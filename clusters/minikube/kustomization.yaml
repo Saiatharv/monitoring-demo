@@ -25,7 +25,7 @@ resources:
   - manifests/sample-app/servicemonitor.yaml
   - manifests/sample-app/prometheus-rule.yaml
 
-   Sample app1
+  # Sample app1
   - manifests/sample-app1/deployment.yaml
   - manifests/sample-app1/service.yaml
   - manifests/sample-app1/servicemonitor.yaml
