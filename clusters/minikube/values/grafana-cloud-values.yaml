@@ -39,6 +39,10 @@ data:
         labelMatchers:
           app.kubernetes.io/name: kube-state-metrics
           release: monitoring
+      cadvisor:                    # ← ADD THIS
+        enabled: true
+      kubelet:                     # ← ADD THIS
+        enabled: true
 
     hostMetrics:
       enabled: true
