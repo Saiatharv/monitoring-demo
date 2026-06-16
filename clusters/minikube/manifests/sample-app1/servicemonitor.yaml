@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: sample-app1
+  namespace: flux-system
+  labels:
+    release: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: sample-app1
+  endpoints:
+    - port: http
+      path: /q/metrics
+      interval: 15s
